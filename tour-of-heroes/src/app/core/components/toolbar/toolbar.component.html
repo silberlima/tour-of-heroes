@@ -5,8 +5,8 @@
   <button
     mat-icon-button
     aria-label="Heroes lilst"
-    matTooltip="menuItem.tooltipText"
     *ngFor="let menuItem of menuItems"
+    [matTooltip]="menuItem.toolTipText"
     [routerLink]="[menuItem.routerLink]"
   >
     <mat-icon>{{menuItem.icon}}</mat-icon>

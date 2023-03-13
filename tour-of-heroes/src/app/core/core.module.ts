@@ -5,12 +5,13 @@ import { MaterialModule } from '../material/material.module';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { MessagesComponent } from './components/messages/messages.component';
 import { CommonModule } from '@angular/common';
+import { PageNotFoundComponent } from './components/page-not-found.component';
 
-const COMPONENTS = [MessagesComponent, ToolbarComponent];
+const COMPONENTS = [MessagesComponent, ToolbarComponent,PageNotFoundComponent];
 const MODULES = [FlexLayoutModule, MaterialModule, RouterModule];
 
 @NgModule({
-  declarations: [COMPONENTS],
+  declarations: [COMPONENTS ],
   imports: [CommonModule, MODULES],
   exports: [MODULES, COMPONENTS],
 })

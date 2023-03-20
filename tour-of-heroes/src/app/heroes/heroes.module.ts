@@ -14,7 +14,7 @@ import { HeoresRoutingModule } from './heroes-routing.module';
     MaterialModule,
     HeoresRoutingModule,
     FlexLayoutModule,
-    FormsModule
+    ReactiveFormsModule
   ],
 })
 export class HeroesModule {}

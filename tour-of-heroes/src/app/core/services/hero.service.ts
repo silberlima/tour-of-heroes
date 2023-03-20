@@ -25,7 +25,23 @@ export class HeroService {
   getHero(id: number): Observable<Hero> {
     return this.http
       .get<Hero>(`${this.heroesUrl}/${id}`)
-      .pipe(tap((heroes) => this.log(`fetched ${heroes.name} heroes`)));
+      .pipe(tap((heroes) => this.log(`Fecthed ${this.descAtributes(heroes)}`)));
+  }
+
+  update(hero: Hero): Observable<Hero> {
+    return this.http
+      .put<Hero>(`${this.heroesUrl}/${hero.id}`, hero)
+      .pipe(tap((hero) => this.log(`Updated ${this.descAtributes(hero)}`)));
+  }
+
+  create(hero: Hero): Observable<Hero> {
+    return this.http
+      .post<Hero>(this.heroesUrl, hero)
+      .pipe(tap((hero) => this.log(`Create ${this.descAtributes(hero)}`)));
+  }
+
+  private descAtributes(hero: Hero): string {
+    return `hero id=${hero.id} and name=${hero.name}`;
   }
 
   private log(message: string): void {

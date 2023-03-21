@@ -18,13 +18,16 @@ export class HeroesComponent implements OnInit {
   constructor(private matDialog: MatDialog, private heroService: HeroService) {}
 
   ngOnInit(): void {
+    this.getHeroes();
+  }
+
+  getHeroes(){
     this.heroService.getHeroes().subscribe(
       (heroes) => this.heroes = heroes,
       (err) => console.log(err),
       () => console.log('Ok')
     );
   }
-
   delete(hero: Hero): void{
     const dialogData: DialogData = {
       cancelText:'Cancel',
@@ -40,11 +43,14 @@ export class HeroesComponent implements OnInit {
     dialogRef.afterClosed().subscribe(conf => {
       if(conf){
         this.heroService.delete(hero).subscribe(() => {
-          this.heroes = this.heroes.filter((h) => h !== hero);
+          this.getHeroes();
         })
       }
     })
 
   }
 
+  onSelected(hero : Hero): void {
+    this.delete(hero);
+  }
 }

@@ -28,6 +28,22 @@ export class HeroService {
       .pipe(tap((heroes) => this.log(`Fecthed ${this.descAtributes(heroes)}`)));
   }
 
+  search(term: string):Observable<Hero[]>{
+    if(!term.trim()){
+      return of([]);
+    }
+
+    return this.http.get<Hero[]>(`${this.heroesUrl}?name=${term}`)
+    .pipe(
+      tap(
+          (heroes) =>
+          heroes.length
+          ? this.log(`found ${heroes.length} hero(s) matching "${term}`)
+          : this.log(`no heroes matching ${term}`)
+        )
+    );
+  }
+
   update(hero: Hero): Observable<Hero> {
     return this.http
       .put<Hero>(`${this.heroesUrl}/${hero.id}`, hero)

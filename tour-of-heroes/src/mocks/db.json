@@ -1,14 +1,6 @@
 {
   "heroes": [
     {
-      "id": 1,
-      "name": "Chapolin"
-    },
-    {
-      "id": 2,
-      "name": "Spider Man"
-    },
-    {
       "id": 3,
       "name": "Captain America"
     },

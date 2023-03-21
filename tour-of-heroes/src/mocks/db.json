@@ -13,10 +13,6 @@
       "name": "Captain America"
     },
     {
-      "id": 4,
-      "name": "Hulk"
-    },
-    {
       "id": 5,
       "name": "Thor 2"
     },
@@ -31,18 +27,6 @@
     {
       "id": 8,
       "name": "Batman"
-    },
-    {
-      "name": "Silber",
-      "id": 9
-    },
-    {
-      "name": "teste",
-      "id": 10
-    },
-    {
-      "id": 11,
-      "name": " testehjgf"
     }
   ]
 }

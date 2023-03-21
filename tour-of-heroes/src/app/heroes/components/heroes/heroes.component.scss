@@ -1,8 +1,7 @@
 .add-button{
   position: absolute;
   right: 32px;
-  top: 104px;
-
+  top: 4;
 }
 
 .mat-row:hover{
@@ -10,3 +9,12 @@
   background: whitesmoke;
 }
 
+.mat-column-id{
+  max-width: 60px;
+}
+
+.mat-column-actions{
+  border-left: 1px solid currentColor;
+  max-width:200px;
+  padding-left: 16px;
+}

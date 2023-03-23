@@ -5,20 +5,12 @@
       "name": "Captain America"
     },
     {
-      "id": 5,
-      "name": "Thor"
-    },
-    {
       "id": 6,
       "name": "Black Panther"
     },
     {
       "id": 7,
       "name": "Black Widow"
-    },
-    {
-      "id": 8,
-      "name": "Batman"
     }
   ]
 }

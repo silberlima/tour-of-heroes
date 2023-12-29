@@ -12,6 +12,7 @@ import { LoadingInterceptor } from './interceptors/loading.interceptor';
 import { HttpErrorInterceptor } from './interceptors/http-error.interceptor';
 import { ConfirmationDialogComponent } from './components/confirmation-dialog/confirmation-dialog.component';
 import { TokenInterceptor } from './interceptors/token.interceptor';
+import { SidenavComponent } from './components/sidenav/sidenav.component';
 
 const CORE_COMPONENTS = [
   MessagesComponent,
@@ -19,6 +20,7 @@ const CORE_COMPONENTS = [
   PageNotFoundComponent,
   LoadingComponent,
   ConfirmationDialogComponent,
+  SidenavComponent
 ];
 const MODULES = [FlexLayoutModule, MaterialModule, RouterModule];
 

@@ -9,7 +9,7 @@ import { MenuItem } from './core/models/menu-item.model';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'Tour of Heroes';
+  title = 'Access Control';
 
   isLoggedIn$: Observable<boolean>;
 
